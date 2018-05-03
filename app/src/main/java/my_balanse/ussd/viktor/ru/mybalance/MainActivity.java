@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         checkBalanse("500");
+      //  MyAsyncTask asyncTask = (MyAsyncTask) new MyAsyncTask().execute();
     }
 
 
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                     MY_PERMISSIONS_REQUEST_READ_CALL_PHONE);
         }
 
-        MyAsyncTask asyncTask = (MyAsyncTask) new MyAsyncTask().execute();
+
 
     }
 
