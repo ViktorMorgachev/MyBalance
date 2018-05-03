@@ -6,7 +6,7 @@ import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
 import android.widget.Toast;
 
-/*public class USSDServise extends AccessibilityService {
+public class USSDServise extends AccessibilityService {
 
     private final String TAG = "USSDServise";
 
@@ -39,4 +39,4 @@ import android.widget.Toast;
         setServiceInfo(info);
     }
 
-}*/
+}

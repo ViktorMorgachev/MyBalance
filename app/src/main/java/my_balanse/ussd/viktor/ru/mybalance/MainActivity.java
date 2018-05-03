@@ -20,8 +20,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        checkBalanse("500");
-      //  MyAsyncTask asyncTask = (MyAsyncTask) new MyAsyncTask().execute();
+          checkBalanse("500");
+          startService(new Intent(this, USSDServise.class));
+          MyAsyncTask asyncTask = (MyAsyncTask) new MyAsyncTask().execute();
     }
 
 
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
                     String ussCode = "*" + "2626" + "*" + "2" + Uri.encode("#");
                     startActivity(new Intent("android.intent.action.CALL", Uri.parse("tel:" + ussCode)));
-                    checkBalanse("");
+                    //checkBalanse("");
                 }
             }
             break;
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPostResume() {
         super.onPostResume();
-        String ussCode = "*" + "2626" + "*" + "2" + Uri.encode("#");
+        //String ussCode = "*" + "2626" + "*" + "2" + Uri.encode("#");
     }
 
     private class MyAsyncTask extends AsyncTask<Void, Void, Void> {
